@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://analysis-dev.iptime.org:3306/security_db?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username: jonghyun
+    password: 1q2w3e4r
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 666085009714-s2kt2bbot32hkk2jpvgneqvqc4td3mo4.apps.googleusercontent.com
+            clientSecret: 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
+            scope:
+              - email
+              - profile
